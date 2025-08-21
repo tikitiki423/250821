@@ -5,3 +5,393 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_infodiffusion,
+ title = {InfoDiffusion: Representation Learning Using Information Maximizing Diffusion Models}
+}
+
+@article{author_year_learning,
+ title = {Learning Diffusion Bridges on Constrained Domains}
+}
+
+@article{author_year_learning,
+ title = {Learning Diffusion Bridges on Constrained Domains}
+}
+
+@article{chen_2023_score,
+ abstract = {Diffusion models achieve state-of-the-art performance in various generation
+tasks. However, their theoretical foundations fall far behind. This paper
+studies score approximation, estimation, and distribution recovery of diffusion
+models, when data are supported on an unknown low-dimensional linear subspace.
+Our result provides sample complexity bounds for distribution estimation using
+diffusion models. We show that with a properly chosen neural network
+architecture, the score function can be both accurately approximated and
+efficiently estimated. Furthermore, the generated distribution based on the
+estimated score function captures the data geometric structures and converges
+to a close vicinity of the data distribution. The convergence rate depends on
+the subspace dimension, indicating that diffusion models can circumvent the
+curse of data ambient dimensionality.},
+ arxiv_url = {https://arxiv.org/pdf/2302.07194v1.pdf},
+ author = {Minshuo Chen and Kaixuan Huang and Tuo Zhao and Mengdi Wang},
+ title = {Score Approximation, Estimation and Distribution Recovery of Diffusion Models on Low-Dimensional Data},
+ year = {2023}
+}
+
+@article{chung_2022_diffusion,
+ abstract = {Diffusion models have been recently studied as powerful generative inverse
+problem solvers, owing to their high quality reconstructions and the ease of
+combining existing iterative solvers. However, most works focus on solving
+simple linear inverse problems in noiseless settings, which significantly
+under-represents the complexity of real-world problems. In this work, we extend
+diffusion solvers to efficiently handle general noisy (non)linear inverse
+problems via approximation of the posterior sampling. Interestingly, the
+resulting posterior sampling scheme is a blended version of diffusion sampling
+with the manifold constrained gradient without a strict measurement consistency
+projection step, yielding a more desirable generative path in noisy settings
+compared to the previous studies. Our method demonstrates that diffusion models
+can incorporate various measurement noise statistics such as Gaussian and
+Poisson, and also efficiently handle noisy nonlinear inverse problems such as
+Fourier phase retrieval and non-uniform deblurring. Code available at
+https://github.com/DPS2022/diffusion-posterior-sampling},
+ arxiv_url = {https://arxiv.org/pdf/2209.14687v4.pdf},
+ author = {Hyungjin Chung and Jeongsol Kim and Michael T. Mccann and Marc L. Klasky and Jong Chul Ye},
+ github_url = {https://github.com/openai/guided-diffusion},
+ title = {Diffusion Posterior Sampling for General Noisy Inverse Problems},
+ year = {2022}
+}
+
+@article{deja_2022_analyzing,
+ abstract = {Diffusion-based Deep Generative Models (DDGMs) offer state-of-the-art
+performance in generative modeling. Their main strength comes from their unique
+setup in which a model (the backward diffusion process) is trained to reverse
+the forward diffusion process, which gradually adds noise to the input signal.
+Although DDGMs are well studied, it is still unclear how the small amount of
+noise is transformed during the backward diffusion process. Here, we focus on
+analyzing this problem to gain more insight into the behavior of DDGMs and
+their denoising and generative capabilities. We observe a fluid transition
+point that changes the functionality of the backward diffusion process from
+generating a (corrupted) image from noise to denoising the corrupted image to
+the final sample. Based on this observation, we postulate to divide a DDGM into
+two parts: a denoiser and a generator. The denoiser could be parameterized by a
+denoising auto-encoder, while the generator is a diffusion-based model with its
+own set of parameters. We experimentally validate our proposition, showing its
+pros and cons.},
+ arxiv_url = {https://arxiv.org/pdf/2206.00070v1.pdf},
+ author = {Kamil Deja and Anna Kuzina and Tomasz Trzciński and Jakub M. Tomczak},
+ github_url = {https://github.com/KamilDeja/analysing_ddgm},
+ title = {On Analyzing Generative and Denoising Capabilities of Diffusion-based Deep Generative Models},
+ year = {2022}
+}
+
+@article{heurteldepeiges_2024_listening,
+ abstract = {In recent years, denoising problems have become intertwined with the
+development of deep generative models. In particular, diffusion models are
+trained like denoisers, and the distribution they model coincide with denoising
+priors in the Bayesian picture. However, denoising through diffusion-based
+posterior sampling requires the noise level and covariance to be known,
+preventing blind denoising. We overcome this limitation by introducing Gibbs
+Diffusion (GDiff), a general methodology addressing posterior sampling of both
+the signal and the noise parameters. Assuming arbitrary parametric Gaussian
+noise, we develop a Gibbs algorithm that alternates sampling steps from a
+conditional diffusion model trained to map the signal prior to the family of
+noise distributions, and a Monte Carlo sampler to infer the noise parameters.
+Our theoretical analysis highlights potential pitfalls, guides diagnostic
+usage, and quantifies errors in the Gibbs stationary distribution caused by the
+diffusion model. We showcase our method for 1) blind denoising of natural
+images involving colored noises with unknown amplitude and spectral index, and
+2) a cosmology problem, namely the analysis of cosmic microwave background
+data, where Bayesian inference of "noise" parameters means constraining models
+of the evolution of the Universe.},
+ arxiv_url = {https://arxiv.org/pdf/2402.19455v2.pdf},
+ author = {David Heurtel-Depeiges and Charles C. Margossian and Ruben Ohana and Bruno Régaldo-Saint Blancard},
+ title = {Listening to the noise: Blind Denoising with Gibbs Diffusion},
+ year = {2024}
+}
+
+@article{ho_2020_denoising,
+ abstract = {We present high quality image synthesis results using diffusion probabilistic
+models, a class of latent variable models inspired by considerations from
+nonequilibrium thermodynamics. Our best results are obtained by training on a
+weighted variational bound designed according to a novel connection between
+diffusion probabilistic models and denoising score matching with Langevin
+dynamics, and our models naturally admit a progressive lossy decompression
+scheme that can be interpreted as a generalization of autoregressive decoding.
+On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and
+a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality
+similar to ProgressiveGAN. Our implementation is available at
+https://github.com/hojonathanho/diffusion},
+ arxiv_url = {https://arxiv.org/pdf/2006.11239v2.pdf},
+ author = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
+ github_url = {https://github.com/hojonathanho/diffusion},
+ title = {Denoising Diffusion Probabilistic Models},
+ year = {2020}
+}
+
+@article{lee_2022_convergence,
+ abstract = {Score-based generative modeling (SGM) is a highly successful approach for
+learning a probability distribution from data and generating further samples.
+We prove the first polynomial convergence guarantees for the core mechanic
+behind SGM: drawing samples from a probability density $p$ given a score
+estimate (an estimate of $\nabla \ln p$) that is accurate in $L^2(p)$. Compared
+to previous works, we do not incur error that grows exponentially in time or
+that suffers from a curse of dimensionality. Our guarantee works for any smooth
+distribution and depends polynomially on its log-Sobolev constant. Using our
+guarantee, we give a theoretical analysis of score-based generative modeling,
+which transforms white-noise input into samples from a learned data
+distribution given score estimates at different noise scales. Our analysis
+gives theoretical grounding to the observation that an annealed procedure is
+required in practice to generate good samples, as our proof depends essentially
+on using annealing to obtain a warm start at each step. Moreover, we show that
+a predictor-corrector algorithm gives better convergence than using either
+portion alone.},
+ arxiv_url = {https://arxiv.org/pdf/2206.06227v2.pdf},
+ author = {Holden Lee and Jianfeng Lu and Yixin Tan},
+ journal = {Advances in Neural Information Processing Systems 35 (2022),
+  22870--22882},
+ title = {Convergence for score-based generative modeling with polynomial complexity},
+ year = {2022}
+}
+
+@article{lovelace_2022_latent,
+ abstract = {Diffusion models have achieved great success in modeling continuous data
+modalities such as images, audio, and video, but have seen limited use in
+discrete domains such as language. Recent attempts to adapt diffusion to
+language have presented diffusion as an alternative to existing pretrained
+language models. We view diffusion and existing language models as
+complementary. We demonstrate that encoder-decoder language models can be
+utilized to efficiently learn high-quality language autoencoders. We then
+demonstrate that continuous diffusion models can be learned in the latent space
+of the language autoencoder, enabling us to sample continuous latent
+representations that can be decoded into natural language with the pretrained
+decoder. We validate the effectiveness of our approach for unconditional,
+class-conditional, and sequence-to-sequence language generation. We demonstrate
+across multiple diverse data sets that our latent language diffusion models are
+significantly more effective than previous diffusion language models.},
+ arxiv_url = {https://arxiv.org/pdf/2212.09462v2.pdf},
+ author = {Justin Lovelace and Varsha Kishore and Chao Wan and Eliot Shekhtman and Kilian Q. Weinberger},
+ github_url = {https://github.com/Shark-NLP/DiffuSeq},
+ title = {Latent Diffusion for Language Generation},
+ year = {2022}
+}
+
+@article{rout_2023_solving,
+ abstract = {We present the first framework to solve linear inverse problems leveraging
+pre-trained latent diffusion models. Previously proposed algorithms (such as
+DPS and DDRM) only apply to pixel-space diffusion models. We theoretically
+analyze our algorithm showing provable sample recovery in a linear model
+setting. The algorithmic insight obtained from our analysis extends to more
+general settings often considered in practice. Experimentally, we outperform
+previously proposed posterior sampling algorithms in a wide variety of problems
+including random inpainting, block inpainting, denoising, deblurring,
+destriping, and super-resolution.},
+ arxiv_url = {https://arxiv.org/pdf/2307.00619v1.pdf},
+ author = {Litu Rout and Negin Raoof and Giannis Daras and Constantine Caramanis and Alexandros G. Dimakis and Sanjay Shakkottai},
+ github_url = {https://github.com/LituRout/PSLD},
+ title = {Solving Linear Inverse Problems Provably via Posterior Sampling with Latent Diffusion Models},
+ year = {2023}
+}
+
+@article{song_2020_improved,
+ abstract = {Score-based generative models can produce high quality image samples
+comparable to GANs, without requiring adversarial optimization. However,
+existing training procedures are limited to images of low resolution (typically
+below 32x32), and can be unstable under some settings. We provide a new
+theoretical analysis of learning and sampling from score models in high
+dimensional spaces, explaining existing failure modes and motivating new
+solutions that generalize across datasets. To enhance stability, we also
+propose to maintain an exponential moving average of model weights. With these
+improvements, we can effortlessly scale score-based generative models to images
+with unprecedented resolutions ranging from 64x64 to 256x256. Our score-based
+models can generate high-fidelity samples that rival best-in-class GANs on
+various image datasets, including CelebA, FFHQ, and multiple LSUN categories.},
+ arxiv_url = {https://arxiv.org/pdf/2006.09011v2.pdf},
+ author = {Yang Song and Stefano Ermon},
+ title = {Improved Techniques for Training Score-Based Generative Models},
+ year = {2020}
+}
+
+@article{song_2020_score,
+ abstract = {Creating noise from data is easy; creating data from noise is generative
+modeling. We present a stochastic differential equation (SDE) that smoothly
+transforms a complex data distribution to a known prior distribution by slowly
+injecting noise, and a corresponding reverse-time SDE that transforms the prior
+distribution back into the data distribution by slowly removing the noise.
+Crucially, the reverse-time SDE depends only on the time-dependent gradient
+field (\aka, score) of the perturbed data distribution. By leveraging advances
+in score-based generative modeling, we can accurately estimate these scores
+with neural networks, and use numerical SDE solvers to generate samples. We
+show that this framework encapsulates previous approaches in score-based
+generative modeling and diffusion probabilistic modeling, allowing for new
+sampling procedures and new modeling capabilities. In particular, we introduce
+a predictor-corrector framework to correct errors in the evolution of the
+discretized reverse-time SDE. We also derive an equivalent neural ODE that
+samples from the same distribution as the SDE, but additionally enables exact
+likelihood computation, and improved sampling efficiency. In addition, we
+provide a new way to solve inverse problems with score-based models, as
+demonstrated with experiments on class-conditional generation, image
+inpainting, and colorization. Combined with multiple architectural
+improvements, we achieve record-breaking performance for unconditional image
+generation on CIFAR-10 with an Inception score of 9.89 and FID of 2.20, a
+competitive likelihood of 2.99 bits/dim, and demonstrate high fidelity
+generation of 1024 x 1024 images for the first time from a score-based
+generative model.},
+ arxiv_url = {https://arxiv.org/pdf/2011.13456v2.pdf},
+ author = {Yang Song and Jascha Sohl-Dickstein and Diederik P. Kingma and Abhishek Kumar and Stefano Ermon and Ben Poole},
+ title = {Score-Based Generative Modeling through Stochastic Differential Equations},
+ year = {2020}
+}
+
+@article{xiang_2023_ddm,
+ abstract = {Magnetic resonance imaging (MRI) is a common and life-saving medical imaging
+technique. However, acquiring high signal-to-noise ratio MRI scans requires
+long scan times, resulting in increased costs and patient discomfort, and
+decreased throughput. Thus, there is great interest in denoising MRI scans,
+especially for the subtype of diffusion MRI scans that are severely
+SNR-limited. While most prior MRI denoising methods are supervised in nature,
+acquiring supervised training datasets for the multitude of anatomies, MRI
+scanners, and scan parameters proves impractical. Here, we propose Denoising
+Diffusion Models for Denoising Diffusion MRI (DDM$^2$), a self-supervised
+denoising method for MRI denoising using diffusion denoising generative models.
+Our three-stage framework integrates statistic-based denoising theory into
+diffusion models and performs denoising through conditional generation. During
+inference, we represent input noisy measurements as a sample from an
+intermediate posterior distribution within the diffusion Markov chain. We
+conduct experiments on 4 real-world in-vivo diffusion MRI datasets and show
+that our DDM$^2$ demonstrates superior denoising performances ascertained with
+clinically-relevant visual qualitative and quantitative metrics.},
+ arxiv_url = {https://arxiv.org/pdf/2302.03018v1.pdf},
+ author = {Tiange Xiang and Mahmut Yurt and Ali B Syed and Kawin Setsompop and Akshay Chaudhari},
+ github_url = {https://github.com/StanfordMIMI/DDM2},
+ title = {DDM$^2$: Self-Supervised Diffusion MRI Denoising with Generative Diffusion Models},
+ year = {2023}
+}
+
+@article{zhang_2023_the,
+ abstract = {In this work, we investigate an intriguing and prevalent phenomenon of
+diffusion models which we term as "consistent model reproducibility": given the
+same starting noise input and a deterministic sampler, different diffusion
+models often yield remarkably similar outputs. We confirm this phenomenon
+through comprehensive experiments, implying that different diffusion models
+consistently reach the same data distribution and scoring function regardless
+of diffusion model frameworks, model architectures, or training procedures.
+More strikingly, our further investigation implies that diffusion models are
+learning distinct distributions affected by the training data size. This is
+supported by the fact that the model reproducibility manifests in two distinct
+training regimes: (i) "memorization regime", where the diffusion model overfits
+to the training data distribution, and (ii) "generalization regime", where the
+model learns the underlying data distribution. Our study also finds that this
+valuable property generalizes to many variants of diffusion models, including
+those for conditional use, solving inverse problems, and model fine-tuning.
+Finally, our work raises numerous intriguing theoretical questions for future
+investigation and highlights practical implications regarding training
+efficiency, model privacy, and the controlled generation of diffusion models.},
+ arxiv_url = {https://arxiv.org/pdf/2310.05264v4.pdf},
+ author = {Huijie Zhang and Jinfan Zhou and Yifu Lu and Minzhe Guo and Peng Wang and Liyue Shen and Qing Qu},
+ github_url = {https://github.com/CompVis/stable-diffusion},
+ title = {The Emergence of Reproducibility and Consistency in Diffusion Models},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_marginalized,
+ title = {Marginalized denoising auto-encoders for nonlinear representations}
+}
+
+@article{bengio_2013_generalized,
+ abstract = {Recent work has shown how denoising and contractive autoencoders implicitly
+capture the structure of the data-generating density, in the case where the
+corruption noise is Gaussian, the reconstruction error is the squared error,
+and the data is continuous-valued. This has led to various proposals for
+sampling from this implicitly learned density function, using Langevin and
+Metropolis-Hastings MCMC. However, it remained unclear how to connect the
+training procedure of regularized auto-encoders to the implicit estimation of
+the underlying data-generating distribution when the data are discrete, or
+using other forms of corruption process and reconstruction errors. Another
+issue is the mathematical justification which is only valid in the limit of
+small corruption noise. We propose here a different attack on the problem,
+which deals with all these issues: arbitrary (but noisy enough) corruption,
+arbitrary reconstruction loss (seen as a log-likelihood), handling both
+discrete and continuous-valued variables, and removing the bias due to
+non-infinitesimal corruption noise (or non-infinitesimal contractive penalty).},
+ arxiv_url = {https://arxiv.org/pdf/1305.6663v4.pdf},
+ author = {Yoshua Bengio and Li Yao and Guillaume Alain and Pascal Vincent},
+ title = {Generalized denoising auto-encoders as generative models},
+ year = {2013}
+}
+
+@article{heusel_2017_gans,
+ abstract = {Generative Adversarial Networks (GANs) excel at creating realistic images
+with complex models for which maximum likelihood is infeasible. However, the
+convergence of GAN training has still not been proved. We propose a two
+time-scale update rule (TTUR) for training GANs with stochastic gradient
+descent on arbitrary GAN loss functions. TTUR has an individual learning rate
+for both the discriminator and the generator. Using the theory of stochastic
+approximation, we prove that the TTUR converges under mild assumptions to a
+stationary local Nash equilibrium. The convergence carries over to the popular
+Adam optimization, for which we prove that it follows the dynamics of a heavy
+ball with friction and thus prefers flat minima in the objective landscape. For
+the evaluation of the performance of GANs at image generation, we introduce the
+"Fr\'echet Inception Distance" (FID) which captures the similarity of generated
+images to real ones better than the Inception Score. In experiments, TTUR
+improves learning for DCGANs and Improved Wasserstein GANs (WGAN-GP)
+outperforming conventional GAN training on CelebA, CIFAR-10, SVHN, LSUN
+Bedrooms, and the One Billion Word Benchmark.},
+ arxiv_url = {https://arxiv.org/pdf/1706.08500v6.pdf},
+ author = {Martin Heusel and Hubert Ramsauer and Thomas Unterthiner and Bernhard Nessler and Sepp Hochreiter},
+ journal = {Advances in Neural Information Processing Systems 30 (NIPS 2017)},
+ title = {Gans trained by a two time-scale update rule converge to a local nash equilibrium},
+ year = {2017}
+}
+
+@article{ho_2021_cascaded,
+ abstract = {We show that cascaded diffusion models are capable of generating high
+fidelity images on the class-conditional ImageNet generation benchmark, without
+any assistance from auxiliary image classifiers to boost sample quality. A
+cascaded diffusion model comprises a pipeline of multiple diffusion models that
+generate images of increasing resolution, beginning with a standard diffusion
+model at the lowest resolution, followed by one or more super-resolution
+diffusion models that successively upsample the image and add higher resolution
+details. We find that the sample quality of a cascading pipeline relies
+crucially on conditioning augmentation, our proposed method of data
+augmentation of the lower resolution conditioning inputs to the
+super-resolution models. Our experiments show that conditioning augmentation
+prevents compounding error during sampling in a cascaded model, helping us to
+train cascading pipelines achieving FID scores of 1.48 at 64x64, 3.52 at
+128x128 and 4.88 at 256x256 resolutions, outperforming BigGAN-deep, and
+classification accuracy scores of 63.02% (top-1) and 84.06% (top-5) at 256x256,
+outperforming VQ-VAE-2.},
+ arxiv_url = {https://arxiv.org/pdf/2106.15282v3.pdf},
+ author = {Jonathan Ho and Chitwan Saharia and William Chan and David J. Fleet and Mohammad Norouzi and Tim Salimans},
+ title = {Cascaded diffusion models for high ﬁdelity image generation},
+ year = {2021}
+}
+
+@article{huang_2021_variational,
+ abstract = {Discrete-time diffusion-based generative models and score matching methods
+have shown promising results in modeling high-dimensional image data. Recently,
+Song et al. (2021) show that diffusion processes that transform data into noise
+can be reversed via learning the score function, i.e. the gradient of the
+log-density of the perturbed data. They propose to plug the learned score
+function into an inverse formula to define a generative diffusion process.
+Despite the empirical success, a theoretical underpinning of this procedure is
+still lacking. In this work, we approach the (continuous-time) generative
+diffusion directly and derive a variational framework for likelihood
+estimation, which includes continuous-time normalizing flows as a special case,
+and can be seen as an infinitely deep variational autoencoder. Under this
+framework, we show that minimizing the score-matching loss is equivalent to
+maximizing a lower bound of the likelihood of the plug-in reverse SDE proposed
+by Song et al. (2021), bridging the theoretical gap.},
+ arxiv_url = {https://arxiv.org/pdf/2106.02808v2.pdf},
+ author = {Chin-Wei Huang and Jae Hyun Lim and Aaron Courville},
+ title = {A variational perspective on diffusion-based generative models and score matching},
+ year = {2021}
+}

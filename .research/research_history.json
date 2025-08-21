@@ -6,5 +6,52 @@
     "score-based generative",
     "diffusion model survey",
     "latent diffusion"
+  ],
+  "research_study_list": [
+    {
+      "title": "Listening to the noise: Blind Denoising with Gibbs Diffusion"
+    },
+    {
+      "title": "On Analyzing Generative and Denoising Capabilities of Diffusion-based Deep Generative Models"
+    },
+    {
+      "title": "DDM$^2$: Self-Supervised Diffusion MRI Denoising with Generative Diffusion Models"
+    },
+    {
+      "title": "Denoising Diffusion Probabilistic Models"
+    },
+    {
+      "title": "Learning Diffusion Bridges on Constrained Domains"
+    },
+    {
+      "title": "Learning Diffusion Bridges on Constrained Domains"
+    },
+    {
+      "title": "Improved Techniques for Training Score-Based Generative Models"
+    },
+    {
+      "title": "Score-Based Generative Modeling through Stochastic Differential Equations"
+    },
+    {
+      "title": "Convergence for score-based generative modeling with polynomial complexity"
+    },
+    {
+      "title": "Score Approximation, Estimation and Distribution Recovery of Diffusion Models on Low-Dimensional Data"
+    },
+    {
+      "title": "The Emergence of Reproducibility and Consistency in Diffusion Models"
+    },
+    {
+      "title": "Diffusion Posterior Sampling for General Noisy Inverse Problems"
+    },
+    {
+      "title": "Solving Linear Inverse Problems Provably via Posterior Sampling with Latent Diffusion Models"
+    },
+    {
+      "title": "Latent Diffusion for Language Generation"
+    },
+    {
+      "title": "InfoDiffusion: Representation Learning Using Information Maximizing Diffusion Models"
+    }
   ]
 }
